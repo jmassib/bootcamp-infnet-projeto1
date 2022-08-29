@@ -1,0 +1,185 @@
+
+/* resolve o espaço em branco na margem direita */
+html , body {
+    overflow-x: hidden;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* navbar */
+.animate__pulse {
+    float: left;
+    margin: 0 1rem;
+}
+
+.animate__pulse:active {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.animate__pulse:hover {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.d-flex {
+    margin-right: 1rem;
+}
+
+#flashanimate:hover {
+    animation: flash;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;    
+}
+
+/* começo do carousel */
+section.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-caption > p , h5 {
+    color:  black;
+    font-size: xx-large;
+}
+
+/* container dos cards, alterar wrap e gap para telas menores */
+.card-deck-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 3rem;
+    border: 0;
+}
+
+.card {
+    width: 15rem;
+}
+
+.card-text {
+    color: dimgray;
+    font-size: medium; 
+}
+
+.list-group-item {
+    font-size: 14px;
+}
+
+/* botões de social media ao final */
+.socialmedia {
+    display: flex;
+    justify-content: center;
+}
+
+.socialmedia > a {
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+
+.socialmedia > a:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.socialmedia > a:active {
+    color: darkblue;
+    text-decoration: none;
+}
+
+ion-icon {
+    color: black;
+    font-size: 2rem;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 15px;
+}
+
+/* animação fadeIn */
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+/* responsividade */
+
+@media screen and (max-width: 591px) {
+    .card-deck-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+    }
+
+    .maislidos {
+        text-align: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }  
+}
+
+@media screen and (min-width: 592px) and (max-width: 840px) {
+    .card-deck-wrapper {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1em;
+    }
+
+    .maislidos {
+        text-align: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .d-flex {
+        display: hidden;
+    }
+}
+
+@media screen and (min-width: 478px) and (max-width: 773px) {
+    .animate__pulse {
+        margin-top: 7px;
+    }
+}
+
+@media  screen and (max-width: 477px) {
+    .container-fluid {
+        justify-content: space-around !important;
+    }
+    .animate__pulse {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .formpc {
+        display: none;
+    }
+    .form-group {
+        margin: 5px 0;   
+    }
+    #sugestoes {
+        margin: 0;
+    }
+    footer > p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 469px) {
+    .formcel {
+        display: none;
+    }
+}
